@@ -1,0 +1,693 @@
+{
+ "shape": [
+  2200,
+  8
+ ],
+ "missing": 0,
+ "duplicates": 0,
+ "classes": [
+  "apple",
+  "banana",
+  "blackgram",
+  "chickpea",
+  "coconut",
+  "coffee",
+  "cotton",
+  "grapes",
+  "jute",
+  "kidneybeans",
+  "lentil",
+  "maize",
+  "mango",
+  "mothbeans",
+  "mungbean",
+  "muskmelon",
+  "orange",
+  "papaya",
+  "pigeonpeas",
+  "pomegranate",
+  "rice",
+  "watermelon"
+ ],
+ "class_counts": {
+  "rice": 100,
+  "maize": 100,
+  "chickpea": 100,
+  "kidneybeans": 100,
+  "pigeonpeas": 100,
+  "mothbeans": 100,
+  "mungbean": 100,
+  "blackgram": 100,
+  "lentil": 100,
+  "pomegranate": 100,
+  "banana": 100,
+  "mango": 100,
+  "grapes": 100,
+  "watermelon": 100,
+  "muskmelon": 100,
+  "apple": 100,
+  "orange": 100,
+  "papaya": 100,
+  "coconut": 100,
+  "cotton": 100,
+  "jute": 100,
+  "coffee": 100
+ },
+ "describe": {
+  "N": {
+   "count": 2200.0,
+   "mean": 50.55,
+   "std": 36.92,
+   "min": 0.0,
+   "25%": 21.0,
+   "50%": 37.0,
+   "75%": 84.25,
+   "max": 140.0
+  },
+  "P": {
+   "count": 2200.0,
+   "mean": 53.36,
+   "std": 32.99,
+   "min": 5.0,
+   "25%": 28.0,
+   "50%": 51.0,
+   "75%": 68.0,
+   "max": 145.0
+  },
+  "K": {
+   "count": 2200.0,
+   "mean": 48.15,
+   "std": 50.65,
+   "min": 5.0,
+   "25%": 20.0,
+   "50%": 32.0,
+   "75%": 49.0,
+   "max": 205.0
+  },
+  "temperature": {
+   "count": 2200.0,
+   "mean": 25.62,
+   "std": 5.06,
+   "min": 8.83,
+   "25%": 22.77,
+   "50%": 25.6,
+   "75%": 28.56,
+   "max": 43.68
+  },
+  "humidity": {
+   "count": 2200.0,
+   "mean": 71.48,
+   "std": 22.26,
+   "min": 14.26,
+   "25%": 60.26,
+   "50%": 80.47,
+   "75%": 89.95,
+   "max": 99.98
+  },
+  "ph": {
+   "count": 2200.0,
+   "mean": 6.47,
+   "std": 0.77,
+   "min": 3.5,
+   "25%": 5.97,
+   "50%": 6.43,
+   "75%": 6.92,
+   "max": 9.94
+  },
+  "rainfall": {
+   "count": 2200.0,
+   "mean": 103.46,
+   "std": 54.96,
+   "min": 20.21,
+   "25%": 64.55,
+   "50%": 94.87,
+   "75%": 124.27,
+   "max": 298.56
+  }
+ },
+ "split": [
+  1760,
+  440
+ ],
+ "results": {
+  "Baseline (most frequent)": {
+   "acc": 0.045454545454545456,
+   "prec": 0.002066115702479339,
+   "rec": 0.045454545454545456,
+   "f1": 0.003952569169960474,
+   "train": 0.045454545454545456,
+   "cv": 0.045454545454545456,
+   "cvs": 0.0,
+   "wrong": 420
+  },
+  "Gaussian Naive Bayes": {
+   "acc": 0.9863636363636363,
+   "prec": 0.9874065328610783,
+   "rec": 0.9863636363636363,
+   "f1": 0.9863380094445563,
+   "train": 0.9801136363636364,
+   "cv": 0.9795454545454545,
+   "cvs": 0.007707193162642343,
+   "wrong": 6
+  },
+  "Random Forest": {
+   "acc": 0.9840909090909091,
+   "prec": 0.9854388036206218,
+   "rec": 0.984090909090909,
+   "f1": 0.9839276533756636,
+   "train": 1.0,
+   "cv": 0.9823863636363637,
+   "cvs": 0.0072762775425373296,
+   "wrong": 7
+  }
+ },
+ "with_humidity": {
+  "Gaussian Naive Bayes": 0.9954545454545455,
+  "Random Forest": 0.9954545454545455
+ },
+ "best": "Random Forest",
+ "confusions_rf": [
+  [
+   "blackgram",
+   "mothbeans",
+   2
+  ],
+  [
+   "lentil",
+   "mungbean",
+   2
+  ],
+  [
+   "rice",
+   "jute",
+   2
+  ],
+  [
+   "blackgram",
+   "maize",
+   1
+  ]
+ ],
+ "confusions_nb": [
+  [
+   "lentil",
+   "mungbean",
+   2
+  ],
+  [
+   "rice",
+   "jute",
+   2
+  ],
+  [
+   "maize",
+   "cotton",
+   1
+  ],
+  [
+   "mothbeans",
+   "blackgram",
+   1
+  ]
+ ],
+ "report_rf": {
+  "apple": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 20.0
+  },
+  "banana": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 20.0
+  },
+  "blackgram": {
+   "precision": 1.0,
+   "recall": 0.85,
+   "f1-score": 0.918918918918919,
+   "support": 20.0
+  },
+  "chickpea": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 20.0
+  },
+  "coconut": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 20.0
+  },
+  "coffee": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 20.0
+  },
+  "cotton": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 20.0
+  },
+  "grapes": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 20.0
+  },
+  "jute": {
+   "precision": 0.9090909090909091,
+   "recall": 1.0,
+   "f1-score": 0.9523809523809523,
+   "support": 20.0
+  },
+  "kidneybeans": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 20.0
+  },
+  "lentil": {
+   "precision": 1.0,
+   "recall": 0.9,
+   "f1-score": 0.9473684210526315,
+   "support": 20.0
+  },
+  "maize": {
+   "precision": 0.9523809523809523,
+   "recall": 1.0,
+   "f1-score": 0.975609756097561,
+   "support": 20.0
+  },
+  "mango": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 20.0
+  },
+  "mothbeans": {
+   "precision": 0.9090909090909091,
+   "recall": 1.0,
+   "f1-score": 0.9523809523809523,
+   "support": 20.0
+  },
+  "mungbean": {
+   "precision": 0.9090909090909091,
+   "recall": 1.0,
+   "f1-score": 0.9523809523809523,
+   "support": 20.0
+  },
+  "muskmelon": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 20.0
+  },
+  "orange": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 20.0
+  },
+  "papaya": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 20.0
+  },
+  "pigeonpeas": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 20.0
+  },
+  "pomegranate": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 20.0
+  },
+  "rice": {
+   "precision": 1.0,
+   "recall": 0.9,
+   "f1-score": 0.9473684210526315,
+   "support": 20.0
+  },
+  "watermelon": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 20.0
+  },
+  "accuracy": 0.9840909090909091,
+  "macro avg": {
+   "precision": 0.9854388036206218,
+   "recall": 0.984090909090909,
+   "f1-score": 0.9839276533756636,
+   "support": 440.0
+  },
+  "weighted avg": {
+   "precision": 0.9854388036206219,
+   "recall": 0.9840909090909091,
+   "f1-score": 0.9839276533756636,
+   "support": 440.0
+  }
+ },
+ "report_nb": {
+  "apple": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 20.0
+  },
+  "banana": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 20.0
+  },
+  "blackgram": {
+   "precision": 0.9523809523809523,
+   "recall": 1.0,
+   "f1-score": 0.975609756097561,
+   "support": 20.0
+  },
+  "chickpea": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 20.0
+  },
+  "coconut": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 20.0
+  },
+  "coffee": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 20.0
+  },
+  "cotton": {
+   "precision": 0.9523809523809523,
+   "recall": 1.0,
+   "f1-score": 0.975609756097561,
+   "support": 20.0
+  },
+  "grapes": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 20.0
+  },
+  "jute": {
+   "precision": 0.9090909090909091,
+   "recall": 1.0,
+   "f1-score": 0.9523809523809523,
+   "support": 20.0
+  },
+  "kidneybeans": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 20.0
+  },
+  "lentil": {
+   "precision": 1.0,
+   "recall": 0.9,
+   "f1-score": 0.9473684210526315,
+   "support": 20.0
+  },
+  "maize": {
+   "precision": 1.0,
+   "recall": 0.95,
+   "f1-score": 0.9743589743589743,
+   "support": 20.0
+  },
+  "mango": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 20.0
+  },
+  "mothbeans": {
+   "precision": 1.0,
+   "recall": 0.95,
+   "f1-score": 0.9743589743589743,
+   "support": 20.0
+  },
+  "mungbean": {
+   "precision": 0.9090909090909091,
+   "recall": 1.0,
+   "f1-score": 0.9523809523809523,
+   "support": 20.0
+  },
+  "muskmelon": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 20.0
+  },
+  "orange": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 20.0
+  },
+  "papaya": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 20.0
+  },
+  "pigeonpeas": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 20.0
+  },
+  "pomegranate": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 20.0
+  },
+  "rice": {
+   "precision": 1.0,
+   "recall": 0.9,
+   "f1-score": 0.9473684210526315,
+   "support": 20.0
+  },
+  "watermelon": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1-score": 1.0,
+   "support": 20.0
+  },
+  "accuracy": 0.9863636363636363,
+  "macro avg": {
+   "precision": 0.9874065328610783,
+   "recall": 0.9863636363636363,
+   "f1-score": 0.9863380094445563,
+   "support": 440.0
+  },
+  "weighted avg": {
+   "precision": 0.9874065328610783,
+   "recall": 0.9863636363636363,
+   "f1-score": 0.9863380094445564,
+   "support": 440.0
+  }
+ },
+ "importance": {
+  "rainfall": 0.2709922071570473,
+  "K": 0.21046776615808846,
+  "P": 0.17859525918499528,
+  "N": 0.12752732227698615,
+  "temperature": 0.11982022067234553,
+  "ph": 0.09259722455053739
+ },
+ "class_means": {
+  "apple": {
+   "N": 20.8,
+   "P": 134.2,
+   "K": 199.9,
+   "temperature": 22.6,
+   "ph": 5.9,
+   "rainfall": 112.7
+  },
+  "banana": {
+   "N": 100.2,
+   "P": 82.0,
+   "K": 50.0,
+   "temperature": 27.4,
+   "ph": 6.0,
+   "rainfall": 104.6
+  },
+  "blackgram": {
+   "N": 40.0,
+   "P": 67.5,
+   "K": 19.2,
+   "temperature": 30.0,
+   "ph": 7.1,
+   "rainfall": 67.9
+  },
+  "chickpea": {
+   "N": 40.1,
+   "P": 67.8,
+   "K": 79.9,
+   "temperature": 18.9,
+   "ph": 7.3,
+   "rainfall": 80.1
+  },
+  "coconut": {
+   "N": 22.0,
+   "P": 16.9,
+   "K": 30.6,
+   "temperature": 27.4,
+   "ph": 6.0,
+   "rainfall": 175.7
+  },
+  "coffee": {
+   "N": 101.2,
+   "P": 28.7,
+   "K": 29.9,
+   "temperature": 25.5,
+   "ph": 6.8,
+   "rainfall": 158.1
+  },
+  "cotton": {
+   "N": 117.8,
+   "P": 46.2,
+   "K": 19.6,
+   "temperature": 24.0,
+   "ph": 6.9,
+   "rainfall": 80.4
+  },
+  "grapes": {
+   "N": 23.2,
+   "P": 132.5,
+   "K": 200.1,
+   "temperature": 23.8,
+   "ph": 6.0,
+   "rainfall": 69.6
+  },
+  "jute": {
+   "N": 78.4,
+   "P": 46.9,
+   "K": 40.0,
+   "temperature": 25.0,
+   "ph": 6.7,
+   "rainfall": 174.8
+  },
+  "kidneybeans": {
+   "N": 20.8,
+   "P": 67.5,
+   "K": 20.0,
+   "temperature": 20.1,
+   "ph": 5.7,
+   "rainfall": 105.9
+  },
+  "lentil": {
+   "N": 18.8,
+   "P": 68.4,
+   "K": 19.4,
+   "temperature": 24.5,
+   "ph": 6.9,
+   "rainfall": 45.7
+  },
+  "maize": {
+   "N": 77.8,
+   "P": 48.4,
+   "K": 19.8,
+   "temperature": 22.4,
+   "ph": 6.2,
+   "rainfall": 84.8
+  },
+  "mango": {
+   "N": 20.1,
+   "P": 27.2,
+   "K": 29.9,
+   "temperature": 31.2,
+   "ph": 5.8,
+   "rainfall": 94.7
+  },
+  "mothbeans": {
+   "N": 21.4,
+   "P": 48.0,
+   "K": 20.2,
+   "temperature": 28.2,
+   "ph": 6.8,
+   "rainfall": 51.2
+  },
+  "mungbean": {
+   "N": 21.0,
+   "P": 47.3,
+   "K": 19.9,
+   "temperature": 28.5,
+   "ph": 6.7,
+   "rainfall": 48.4
+  },
+  "muskmelon": {
+   "N": 100.3,
+   "P": 17.7,
+   "K": 50.1,
+   "temperature": 28.7,
+   "ph": 6.4,
+   "rainfall": 24.7
+  },
+  "orange": {
+   "N": 19.6,
+   "P": 16.6,
+   "K": 10.0,
+   "temperature": 22.8,
+   "ph": 7.0,
+   "rainfall": 110.5
+  },
+  "papaya": {
+   "N": 49.9,
+   "P": 59.0,
+   "K": 50.0,
+   "temperature": 33.7,
+   "ph": 6.7,
+   "rainfall": 142.6
+  },
+  "pigeonpeas": {
+   "N": 20.7,
+   "P": 67.7,
+   "K": 20.3,
+   "temperature": 27.7,
+   "ph": 5.8,
+   "rainfall": 149.5
+  },
+  "pomegranate": {
+   "N": 18.9,
+   "P": 18.8,
+   "K": 40.2,
+   "temperature": 21.8,
+   "ph": 6.4,
+   "rainfall": 107.5
+  },
+  "rice": {
+   "N": 79.9,
+   "P": 47.6,
+   "K": 39.9,
+   "temperature": 23.7,
+   "ph": 6.4,
+   "rainfall": 236.2
+  },
+  "watermelon": {
+   "N": 99.4,
+   "P": 17.0,
+   "K": 50.2,
+   "temperature": 25.6,
+   "ph": 6.5,
+   "rainfall": 50.8
+  }
+ }
+}
